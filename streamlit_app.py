@@ -54,6 +54,9 @@ if option == altair_custom_axis_labels:
     line_chart = alt.Chart(energy_source).mark_line().encode(
         y=  alt.Y('Price ($)', title='Close Price($)'),
         x=  alt.X( 'month(Date)', title='Month')
+    ).configure_axis(
+        titleFontSize=14,
+        labelFontSize=12
     )
     st.altair_chart(line_chart, use_container_width=True)
 elif option == simple_line_chart:
@@ -70,6 +73,8 @@ elif option == line_chart_title:
     ).properties(
         height=400, width=700,
         title="Energy Bill"
+    ).configure_title(
+        fontSize=16
     )
     st.altair_chart(line_chart, use_container_width=True)
 
@@ -92,7 +97,7 @@ elif option == complex_line_chart:
         height=400, width=700,
         title=stock_title
     ).configure_title(
-        fontSize=16
+        fontSize=12
     ).configure_axis(
         titleFontSize=14,
         labelFontSize=12
