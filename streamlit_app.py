@@ -15,7 +15,7 @@ complex_line_chart = 'Altair Complex Line Chart'
 line_chart_title = 'Altair Line Chart Title'
 
 
-option = st.selectbox('Streamlit Line Chart Tutorial', (simple_line_chart, altair_custom_axis_labels,line_chart_title,complex_line_chart))
+option = st.selectbox('Streamlit Line Chart Tutorial', (complex_line_chart,simple_line_chart, altair_custom_axis_labels,line_chart_title))
 
 def get_stock_df(symbol,start,end):
    source = 'yahoo'
