@@ -3,6 +3,8 @@ import pandas as pd
 import altair as alt
 from pandas_datareader import data
 
+"pip install streamlit pandas altair pandas_datareader"
+
 energy_source = pd.DataFrame({
     "EnergyType": ["Electricity", "Gasoline", "Natural Gas", "Electricity", "Gasoline", "Natural Gas", "Electricity", "Gasoline", "Natural Gas"],
     "Price ($)":  [150, 100, 30, 130, 80, 70, 170, 83, 70],
